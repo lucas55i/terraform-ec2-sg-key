@@ -4,7 +4,6 @@ module "s3" {
   tags         = var.tags
 }
 
-
 module "ec2" {
   source       = "./models/ec2"
   project_name = var.project_name
