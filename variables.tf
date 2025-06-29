@@ -7,3 +7,7 @@ variable "tags" {
   type        = map(string)
   description = "A map of tags to add to all AWS resources"
 }
+variable "cidr_block" {
+  type        = string
+  description = "Networking CIDR block to be used for the VPC"
+}

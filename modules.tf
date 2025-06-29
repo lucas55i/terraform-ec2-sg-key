@@ -9,3 +9,10 @@ module "ec2" {
   project_name = var.project_name
   tags         = var.tags
 }
+
+module "network" {
+  source       = "./models/network"
+  project_name = var.project_name
+  tags         = var.tags
+  cidr_block   = var.cidr_block
+}
