@@ -5,7 +5,7 @@ terraform {
       version = "6.0.0-beta1"
     }
   }
-  
+
   backend "s3" {
     bucket = "terraform-ec2-sg-key-s3"
     key    = "dev/terraforma.tfstate"
