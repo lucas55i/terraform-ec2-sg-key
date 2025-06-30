@@ -5,9 +5,11 @@ module "s3" {
 }
 
 module "ec2" {
-  source       = "./models/ec2"
-  project_name = var.project_name
-  tags         = var.tags
+  source           = "./models/ec2"
+  project_name     = var.project_name
+  tags             = var.tags
+  public_subnet_1a = module.network.ec2_subnet_puclic_1a
+  ec2_sg           = module.network.ec2_sg
 }
 
 module "network" {
